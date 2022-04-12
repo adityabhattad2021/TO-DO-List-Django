@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,25 +12,27 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Red+Hat+Mono&family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
         rel="stylesheet">
     <title>TO-DO List</title>
-    
-    <link rel="stylesheet" href="{% static 'styles/main1.css' %}">
 
+    <link rel="stylesheet" href="{% static 'styles/main1.css' %}">
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-image: url({% static 'images/pexels-luis-dalvan-1770809.jpg' %});
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
-    <section class="showcase">
-        <video src="{% static 'videos/video (2).mp4' %}" muted autoplay loop></video>
-        <div class="overlay">
+    <div class="container">
+        <div class="card">
+            {% block content %}
 
+            {% endblock content %}
         </div>
-        <div class="container">
-            <div class="card">
-                {% block content %}
-
-                {% endblock content %}
-            </div>
-        </div>
-    </section>
+    </div>
 </body>
 
 </html>
