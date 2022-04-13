@@ -2,4 +2,4 @@
 Simple Web App made with django
 
 App is live on
-https://todoappbydeveloper.herokuapp.com/
+https://todoappbydeveloper.herokuapp.com/  v 1.1
